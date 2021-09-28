@@ -22,7 +22,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 
       }
 
-      axios.post(`http://localhost:3100/addToFav`,obj).then(result=>{
+      axios.post(`https://exam-301-final.herokuapp.com/addToFav`,obj).then(result=>{
           console.log(result);
       })
       .catch(err=>{

@@ -25,7 +25,7 @@ export class FavFruit extends Component {
     };
 
     axios
-      .get(`http://localhost:3100/getFromDataBase`, { params: obj })
+      .get(`https://exam-301-final.herokuapp.com/getFromDataBase`, { params: obj })
       .then((result) => {
         this.setState({
           favItems: result.data,
@@ -69,7 +69,7 @@ export class FavFruit extends Component {
       price: event.target.price.value,
     };
 
-    axios.put(`http://localhost:3100/update/${this.state.id}`, obj).then(result => {
+    axios.put(`https://exam-301-final.herokuapp.com/update/${this.state.id}`, obj).then(result => {
         this.setState({
           favItems: result.data,
         });
@@ -93,7 +93,7 @@ export class FavFruit extends Component {
       userEmail: user.email,
 
   }
-  axios.delete(`http://localhost:3100/delete/${id}`,{params :obj}).then(result=>{
+  axios.delete(`https://exam-301-final.herokuapp.com/delete/${id}`,{params :obj}).then(result=>{
     this.setState({
       favItems :result.data,
 

@@ -16,7 +16,7 @@ export class Home extends Component {
   }
 
   componentDidMount=()=>{
-    axios.get(`http://localhost:3100/getStaticFruits`).then(result=>{
+    axios.get(`https://exam-301-final.herokuapp.com/getStaticFruits`).then(result=>{
       this.setState({
         staticFruits :result.data
       })
